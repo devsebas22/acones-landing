@@ -6,10 +6,20 @@
 <title>ACONES | Asociación Colombiana para la Negociación Estratégica</title>
 <meta name="description" content="Conectamos personas, construimos acuerdos y transformamos conflictos. Conciliación, arbitraje, insolvencia y formación en negociación estratégica.">
 <meta name="theme-color" content="#213B60">
-<meta property="og:title" content="ACONES | Negociación Estratégica">
-<meta property="og:description" content="Conectamos personas, construimos acuerdos y transformamos conflictos.">
-<meta property="og:image" content="assets/logo-acones.png">
-<link rel="icon" href="assets/logo-acones.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://acones-landing-production.up.railway.app/">
+<meta property="og:site_name" content="ACONES">
+<meta property="og:title" content="ACONES | Asociación Colombiana para la Negociación Estratégica">
+<meta property="og:description" content="Conectamos personas, construimos acuerdos y transformamos conflictos. Conciliación, arbitraje, insolvencia y formación.">
+<meta property="og:image" content="https://acones-landing-production.up.railway.app/assets/og-acones.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ACONES, Asociación Colombiana para la Negociación Estratégica">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://acones-landing-production.up.railway.app/assets/og-acones.jpg">
+<link rel="icon" type="image/png" href="assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
@@ -100,8 +110,8 @@
   /* ---------- Band (A pattern from the brochure) ---------- */
   .band {
     height: 2.75rem; background-color: var(--navy-deep);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='44' viewBox='0 0 56 44'%3E%3Cpath d='M6 40 L24 4 h8 L50 40 h-8 L28 12 L14 40z' fill='%23213B60'/%3E%3Cpath d='M17 30 l20 -6 l3 6 l-24 7z' fill='%2395BE96' fill-opacity='.55'/%3E%3C/svg%3E");
-    background-size: 56px 44px; background-position: center;
+    background-image: url("assets/patron-a.png");
+    background-size: 52px 44px; background-repeat: repeat-x; background-position: center;
   }
 
   /* ---------- Sections ---------- */
@@ -189,6 +199,92 @@
   .office__actions .btn--green { grid-column: 1 / -1; }
   @media (min-width: 60rem) { .office-list { grid-template-columns: repeat(3, 1fr); } }
 
+
+  .promo__title::after, .ig__title::after { display: none; }
+  /* Promo */
+  .promo { background: var(--mist); padding: 0 0 1.5rem; }
+  .promo__card {
+    position: relative; overflow: hidden;
+    background: #fff; border: 2px solid var(--green); border-radius: 20px;
+    padding: 2rem 1.5rem; display: grid; gap: 1.5rem; align-items: center;
+  }
+  .promo__badge {
+    justify-self: start; display: grid; place-items: center; text-align: center;
+    width: 7.5rem; height: 7.5rem; border-radius: 50%; background: var(--navy); color: #fff;
+    line-height: 1; font-weight: 700;
+  }
+  .promo__badge strong { font-size: 2.6rem; letter-spacing: -.03em; display: block; }
+  .promo__badge span { font-size: .85rem; color: var(--green); display: block; margin-top: .3rem; }
+  .promo__title {
+    font-size: clamp(1.35rem, 4.6vw, 1.9rem); line-height: 1.15; letter-spacing: -.01em;
+    color: var(--navy); margin: 0 0 .75rem; text-wrap: balance;
+  }
+  .promo__text { margin: 0 0 .5rem; color: var(--ink); max-width: 36rem; }
+  .promo__meta { margin: 0 0 1.25rem; color: var(--muted); font-size: .9rem; }
+  .btn--wa { background: #25D366; color: #fff; }
+  @media (min-width: 52rem) {
+    .promo__card { grid-template-columns: auto 1fr; gap: 2.5rem; padding: 2.5rem; }
+  }
+
+  /* Instagram */
+  .ig { background: var(--mist); padding-top: 0; }
+  .ig__card {
+    background: var(--navy); color: #fff; border-radius: 20px; padding: 2rem 1.5rem;
+    display: grid; gap: 1.25rem; position: relative; overflow: hidden;
+  }
+  .ig__card::after {
+    content: ""; position: absolute; right: -4rem; top: -4rem; width: 14rem; height: 14rem; border-radius: 50%;
+    background: radial-gradient(circle, rgba(149,190,150,.22), transparent 70%); pointer-events: none;
+  }
+  .ig__icon {
+    width: 3.5rem; height: 3.5rem; border-radius: 16px; display: grid; place-items: center;
+    background: linear-gradient(45deg, #F9CE34, #EE2A7B 50%, #6228D7);
+  }
+  .ig__icon svg { width: 1.9rem; height: 1.9rem; }
+  .ig__title { font-size: clamp(1.5rem, 5vw, 2.1rem); line-height: 1.1; margin: 0; color: #fff; letter-spacing: -.01em; }
+  .ig__text { margin: 0; color: rgba(255,255,255,.85); max-width: 34rem; }
+  .ig__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .ig__tags li { font-size: .9rem; padding: .35rem .8rem; border-radius: 999px; border: 1px solid rgba(149,190,150,.6); color: var(--green); }
+  .ig__cta { justify-self: start; }
+  .ig__handle { font-size: .95rem; color: rgba(255,255,255,.7); margin: -.5rem 0 0; }
+  @media (min-width: 52rem) {
+    .ig__card { grid-template-columns: auto 1fr auto; align-items: center; column-gap: 2rem; padding: 2.5rem; }
+    .ig__body { display: grid; gap: .9rem; }
+    .ig__action { display: grid; gap: .75rem; justify-items: center; }
+  }
+  @media (max-width: 51.99rem) { .ig__body, .ig__action { display: grid; gap: 1rem; } .ig__cta { justify-self: stretch; } }
+
+
+  /* Pop-up descuento */
+  .promo-modal {
+    border: 0; padding: 0; border-radius: 22px; width: min(100% - 2rem, 26rem);
+    max-height: calc(100% - 2rem); overflow: auto; background: #fff; color: var(--ink);
+    box-shadow: 0 30px 80px rgba(0,0,0,.4);
+  }
+  .promo-modal::backdrop { background: rgba(23,43,72,.72); }
+  .promo-modal__head { background: var(--navy); color: #fff; padding: 2rem 1.5rem 1.5rem; text-align: center; position: relative; }
+  .promo-modal__head .promo__badge { justify-self: center; margin: 0 auto .9rem; background: #fff; color: var(--navy); width: 6.5rem; height: 6.5rem; }
+  .promo-modal__head .promo__badge span { color: var(--green-deep); }
+  .promo-modal__head h2 { color: #fff; font-size: 1.45rem; line-height: 1.15; margin: 0; text-wrap: balance; }
+  .promo-modal__head h2::after { display: none; }
+  .promo-modal__body { padding: 1.5rem; text-align: center; }
+  .promo-modal__body p { margin: 0 0 .5rem; }
+  .promo-modal__body .promo__meta { margin-bottom: 1.25rem; }
+  .promo-modal__body .btn { width: 100%; }
+  .promo-modal__later { margin-top: .75rem; background: none; border: 0; color: var(--muted); font: 500 .95rem var(--font); cursor: pointer; padding: .5rem; }
+  .promo-modal__close {
+    position: absolute; top: .75rem; right: .75rem; width: 2.5rem; height: 2.5rem; border-radius: 50%;
+    border: 0; background: rgba(255,255,255,.12); color: #fff; cursor: pointer; display: grid; place-items: center;
+  }
+  .promo-modal__close svg { width: 1.2rem; height: 1.2rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    .promo-modal[open] { animation: pop .35s cubic-bezier(.2,.9,.3,1.2); }
+    @keyframes pop { from { opacity: 0; transform: translateY(16px) scale(.96); } to { opacity: 1; transform: none; } }
+  }
+
+  .save-contact { margin: -.75rem 0 2rem; }
+  .social .social__save { background: var(--green); color: var(--navy-deep); border-color: var(--green); font-weight: 700; }
+
   /* Footer */
   footer { background: var(--navy); color: #fff; padding: 3rem 0 6.5rem; text-align: center; }
   footer img { width: min(13rem, 55vw); margin: 0 auto 1.25rem; }
@@ -240,6 +336,7 @@
 <div class="band" aria-hidden="true"></div>
 
 <main>
+
 <!-- ============ 2. PORTAFOLIO ============ -->
 <section id="servicios">
   <div class="wrap">
@@ -293,6 +390,7 @@
   <div class="wrap">
     <h2>Sedes y convenios</h2>
     <p class="lead">Encuéntranos en nuestras sedes o escríbenos directamente.</p>
+    <a class="btn btn--navy save-contact" href="assets/acones.vcf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M19 8v6M16 11h6"/></svg>Guardar contacto de ACONES</a>
 
     <div class="office-list">
       <article class="office">
@@ -325,7 +423,7 @@
           <dd><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>pereira@acones.org</dd>
         </dl>
         <div class="office__actions">
-          <a class="btn btn--green" href="https://wa.me/573332303737" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="btn btn--green" href="https://wa.me/573332303737?text=Hola%20ACONES%20Pereira%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener">Escribir por WhatsApp</a>
           <a class="btn btn--ghost" href="tel:+573332303737">Llamar</a>
           <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Calle+19+9-50+Edificio+Diario+del+Otun+Pereira" target="_blank" rel="noopener">Cómo llegar</a>
         </div>
@@ -352,6 +450,39 @@
     </div>
   </div>
 </section>
+
+<!-- ============ PROMO DESCUENTO ============ -->
+<section class="promo" aria-labelledby="promo-title">
+  <div class="wrap">
+    <div class="promo__card">
+      <div class="promo__badge" aria-hidden="true"><div><strong>10%</strong><span>de descuento</span></div></div>
+      <div>
+        <h2 class="promo__title" id="promo-title">¡Tu próxima audiencia de conciliación tiene descuento!</h2>
+        <p class="promo__text">Escríbenos hoy, déjanos tu nombre completo y recibe un 10% de descuento en tu próxima solicitud de audiencia de conciliación en derecho.</p>
+        <p class="promo__meta">Tienes 6 meses para redimirlo. Aplican términos y condiciones.</p>
+        <a class="btn btn--wa" href="https://wa.me/573102625707?text=Hola%20ACONES%2C%20quiero%20reclamar%20el%2010%25%20de%20descuento%20en%20mi%20pr%C3%B3xima%20audiencia%20de%20conciliaci%C3%B3n%20en%20derecho.%20Mi%20nombre%20completo%20es%3A%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>Quiero mi descuento</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="ig" aria-labelledby="ig-title">
+  <div class="wrap">
+    <div class="ig__card">
+      <div class="ig__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></div>
+      <div class="ig__body">
+        <h2 class="ig__title" id="ig-title">¡No te quedes por fuera!</h2>
+        <p class="ig__text">Lo que viene, también queremos compartirlo contigo. Síguenos en Instagram y acompáñanos.</p>
+        <ul class="ig__tags"><li>Novedades</li><li>Servicios</li><li>Contenido</li></ul>
+      </div>
+      <div class="ig__action">
+        <a class="btn btn--green ig__cta" href="https://www.instagram.com/acones" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Únete a nuestra comunidad</a>
+        <p class="ig__handle">@acones</p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -360,6 +491,7 @@
     <p class="entity">Centro de Conciliación, Arbitraje y Amigable Composición</p>
     <p class="vigilado">Vigilado por el Ministerio de Justicia y del Derecho</p>
     <div class="social">
+      <a class="social__save" href="assets/acones.vcf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M19 8v6M16 11h6"/></svg>Guardar contacto</a>
       <a href="https://wa.me/message/RGONKIJLXXOLE1" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>310 262 5707
       </a>
@@ -373,7 +505,24 @@
   </div>
 </footer>
 
-<a class="wa-fab" href="https://wa.me/message/RGONKIJLXXOLE1" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+<!-- ============ POP-UP DESCUENTO ============ -->
+<dialog class="promo-modal" id="promoModal" aria-labelledby="promoModalTitle">
+  <div class="promo-modal__head">
+    <button class="promo-modal__close" type="button" data-close aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="promo__badge" aria-hidden="true"><div><strong>10%</strong><span>de descuento</span></div></div>
+    <h2 id="promoModalTitle">¡Tu próxima audiencia de conciliación tiene descuento!</h2>
+  </div>
+  <div class="promo-modal__body">
+    <p>Escríbenos hoy, déjanos tu nombre completo y recibe un 10% de descuento en tu próxima solicitud de audiencia de conciliación en derecho.</p>
+    <p class="promo__meta">Tienes 6 meses para redimirlo. Aplican términos y condiciones.</p>
+    <a class="btn btn--wa" href="https://wa.me/573102625707?text=Hola%20ACONES%2C%20quiero%20reclamar%20el%2010%25%20de%20descuento%20en%20mi%20pr%C3%B3xima%20audiencia%20de%20conciliaci%C3%B3n%20en%20derecho.%20Mi%20nombre%20completo%20es%3A%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>Quiero mi descuento</a>
+    <button class="promo-modal__later" type="button" data-close>Ahora no</button>
+  </div>
+</dialog>
+
+<a class="wa-fab" href="https://wa.me/573102625707?text=Hola%20ACONES%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
 </a>
 
@@ -406,6 +555,31 @@
       label.textContent = 'Ver de nuevo';
       btn.hidden = false;
     });
+  })();
+
+  // Pop-up de descuento: aparece una vez por visita al llegar a "Sedes y convenios"
+  (function () {
+    var dlg = document.getElementById('promoModal');
+    var target = document.getElementById('sedes');
+    if (!dlg || !target || typeof dlg.showModal !== 'function' || !('IntersectionObserver' in window)) return;
+    var KEY = 'acones_promo_visto';
+    try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
+
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        io.disconnect();
+        setTimeout(function () {
+          dlg.showModal();
+          try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+        }, 600);
+      }
+    }, { threshold: 0.25 });
+    io.observe(target);
+
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.closest('[data-close]')) dlg.close();
+    });
+    dlg.querySelector('.btn--wa').addEventListener('click', function () { dlg.close(); });
   })();
 </script>
 </body>
