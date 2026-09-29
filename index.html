@@ -246,7 +246,10 @@
   .ig__tags li { font-size: .9rem; padding: .35rem .8rem; border-radius: 999px; border: 1px solid rgba(149,190,150,.6); color: var(--green); }
 
   .contest { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.16); position: relative; }
-  .contest__kicker { margin: 0 0 .35rem; font-size: .88rem; font-weight: 700; color: var(--green); }
+  .contest__kicker {
+    display: inline-block; margin: 0 0 .9rem; padding: .5rem .95rem; border-radius: 12px;
+    background: var(--green); color: var(--navy-deep); font-size: clamp(1.05rem, 3.8vw, 1.3rem); font-weight: 700; line-height: 1.2;
+  }
   .contest__title { font-size: clamp(1.45rem, 5vw, 1.9rem); line-height: 1.1; margin: 0; color: #fff; letter-spacing: -.01em; }
   .contest__how { margin: .5rem 0 1.25rem; color: rgba(255,255,255,.75); font-weight: 500; }
   .contest__steps { list-style: none; margin: 0 0 1.25rem; padding: 0; display: grid; gap: .75rem; }
@@ -489,7 +492,6 @@
       <div class="promo__badge" aria-hidden="true"><div><strong>10%</strong><span>de descuento</span></div></div>
       <div>
         <h2 class="promo__title" id="promo-title">¡Tu próxima audiencia de conciliación tiene descuento!</h2>
-        <p class="promo__sub">Sin importar la cuantía de la solicitud.</p>
         <p class="promo__text">Escríbenos hoy, déjanos tu nombre completo y recibe un 10% de descuento en tu próxima solicitud de audiencia de conciliación en derecho.</p>
         <p class="promo__meta">Tu descuento podrá ser redimido durante los próximos 6 meses.</p>
         <div class="promo__terms">
@@ -576,7 +578,6 @@
     </button>
     <div class="promo__badge" aria-hidden="true"><div><strong>10%</strong><span>de descuento</span></div></div>
     <h2 id="promoModalTitle">¡Tu próxima audiencia de conciliación tiene descuento!</h2>
-    <p class="promo-modal__sub">Sin importar la cuantía de la solicitud.</p>
   </div>
   <div class="promo-modal__body">
     <p>Escríbenos hoy, déjanos tu nombre completo y recibe un 10% de descuento en tu próxima solicitud de audiencia de conciliación en derecho.</p>
